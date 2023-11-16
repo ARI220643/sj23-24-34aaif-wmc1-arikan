@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  max-width: 1000px;
+  padding: 60px;
+  margin: auto;
+}
+header {
+  padding: 10px;
+  background-color: #16416b;
+}
+@media only screen and (min-width: 800px) {
+  .menu-list {
+    list-style: none;
+    display: flex;
+  }
+
+  .menu-list li {
+    margin-right: 20px;
+  }
+
+  .menu-list li:last-child {
+    margin-right: 0;
+  }
+
+  .menu-list a {
+    text-decoration: none;
+    color: white;
+  }
+  .menu-dropdown {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .menu-dropdown:hover .submenu {
+    display: block;
+  }
+  .menu-list a {
+    color: white;
+    text-decoration: none;
+  }
+  nav ul {
+    list-style: none;
+  }
+}
+
+nav ul {
+  list-style: none;
+  text-align: left;
+  text-decoration: none;
+}
+.erste {
+  padding: 40px;
+  margin-top: 10px;
+  background-color: steelblue;
+}
+.erste h1 {
+  margin-right: 10px;
+  color: white;
+}
+.erste h1,
+.erste img {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 70px;
+}
+.erste h2 {
+  margin-top: 20px;
+  font-size: 36px;
+  color: white;
+}
+
+.erste p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: white;
+}
+.erste p:first-of-type {
+  margin-bottom: 30px;
+}
+.erste p:last-of-type {
+  text-align: center;
+}
+.erste img {
+  max-width: 100%;
+}
+
+.zweite,
+.dritte {
+  background-color: white;
+  color: black;
+  padding-top: 50px;
+}
+
+.zweite h1,
+.dritte h1 {
+  font-size: 30px;
+}
+
+.zweite h2,
+.dritte h2 {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.zweite p,
+.dritte p {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.vierte {
+  background-color: azure;
+  border-left: 10px solid dodgerblue;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  padding: 15px;
+}
+.vierte img,
+.vierte p:first-of-type {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 20px;
+}
+.vierte p {
+  text-align: center;
+}
+
+.vierte img {
+  max-height: 150px;
+}
+
+.vierte p:first-of-type {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.Adresse {
+  font-style: italic;
+  padding-top: 20px;
+  margin-bottom: 15px;
+}
+
+/*footer*/
+
+footer {
+  background-color: #16416b;
+  text-align: left;
+  color: white;
+  padding: 10px;
+}
+
+footer nav ul li {
+  margin-right: 20px;
+  margin-left: 10px;
+  display: inline;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: white;
+}
