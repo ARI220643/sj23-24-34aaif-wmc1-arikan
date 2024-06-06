@@ -13,8 +13,8 @@ neueAufgabeHinzufügen.addEventListener('click', () => {
   aufgabenElement.innerHTML = `
     <input type="checkbox" />
     <span>${neueAufgabe}</span>
-    <button>Entfernen</button>
-  `;
+    <button>Entfernen</button>`
+    ;
 
   ausstehendeAufgaben.appendChild(aufgabenElement);
 
