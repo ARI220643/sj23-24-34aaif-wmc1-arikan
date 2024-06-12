@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notenverwaltung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Notenverwaltung</h1>
+    <div class="eingabe-container">
+        <input type="text" id="schuelerName" placeholder="Schülername">
+        <button onclick="schuelerHinzufuegen()">Schüler hinzufügen</button>
+    </div>
+    <div class="tabelle-container">
+        <table id="notenTabelle">
+            <thead>
+                <tr>
+                    <th>Schülername</th>
+                    <th>Mathematik</th>
+                    <th>Deutsch</th>
+                    <th>Englisch</th>
+                    <th>Programmieren</th>
+                    <th>Aktion</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            </tbody>
+        </table>
+    </div>
+    <div class="druck-container">
+        <button onclick="pdfErstellen()">PDF Erstellen</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
