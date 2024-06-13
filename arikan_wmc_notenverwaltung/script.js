@@ -14,6 +14,7 @@ function schuelerHinzufuegen() {
         <td><input type="number" class="noten-eingabe" min="1" max="5"></td>
         <td><input type="number" class="noten-eingabe" min="1" max="5"></td>
         <td><input type="number" class="noten-eingabe" min="1" max="5"></td>
+        
         <td class="durchschnittsnote"></td>
         <td><button onclick="notenEinreichen(this)">OK</button></td>
     `;
