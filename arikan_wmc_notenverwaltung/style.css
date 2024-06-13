@@ -44,10 +44,11 @@ button:hover {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    overflow-x: auto;
 }
 
 table {
-    width: 80%;
+    width: 100%;
     border-collapse: collapse;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

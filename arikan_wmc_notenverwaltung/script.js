@@ -14,6 +14,7 @@ function schuelerHinzufuegen() {
         <td><input type="number" class="noten-eingabe" min="1" max="5"></td>
         <td><input type="number" class="noten-eingabe" min="1" max="5"></td>
         <td><input type="number" class="noten-eingabe" min="1" max="5"></td>
+        <td class="durchschnittsnote"></td>
         <td><button onclick="notenEinreichen(this)">OK</button></td>
     `;
 
@@ -24,6 +25,9 @@ function schuelerHinzufuegen() {
 function notenEinreichen(button) {
     const reihe = button.closest('tr');
     const notenEingaben = reihe.querySelectorAll('.noten-eingabe');
+    let summe = 0;
+    let anzahl = 0;
+
     notenEingaben.forEach((eingabe) => {
         const note = parseInt(eingabe.value);
         const zelle = eingabe.parentElement;
@@ -37,11 +41,19 @@ function notenEinreichen(button) {
             } else if (note === 5) {
                 zelle.classList.add('note-5');
             }
+
+            summe += note;
+            anzahl++;
         } else {
             alert('Bitte geben Sie eine gültige Note zwischen 1 und 5 ein.');
             return;
         }
     });
+
+    if (anzahl > 0) {
+        const durchschnittsnote = (summe / anzahl).toFixed(2);
+        reihe.querySelector('.durchschnittsnote').textContent = durchschnittsnote;
+    }
 }
 
 function pdfErstellen() {
@@ -57,7 +69,7 @@ function pdfErstellen() {
         const zellen = reihe.querySelectorAll('th, td');
         zellen.forEach((zelle, zellenIndex) => {
             if (zellenIndex < zellen.length - 1) {
-                doc.text(zelle.textContent, 10 + zellenIndex * 40, y);
+                doc.text(zelle.textContent, 10 + zellenIndex * 30, y);
             }
         });
         y += 10;
